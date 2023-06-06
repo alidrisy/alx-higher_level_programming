@@ -8,7 +8,7 @@ if number > 0:
     else:
         print(f"Last digit of {number:d} is {num:d} and", end="")
         print("is less than 6 and not 0")
-else
+else:
     if num == 0:
         print(f"Last digit of {number:d} is {num:d} and is 0")
     else:
