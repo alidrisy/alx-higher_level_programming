@@ -15,7 +15,15 @@ def pow(a, b):
                 b += 1
     else:
         x = abs(x)
-        for i in range(1,b):
-            x *= abs(a)
-        x = -(x)
+        if b == 0:
+            x = 1
+        elif b > 0:
+            for i in range(1,b):
+                x *= a
+            x = -(x)
+        else:
+            while b != 1:
+                x /= a
+                b += 1
+            x = -(x)
     return x
