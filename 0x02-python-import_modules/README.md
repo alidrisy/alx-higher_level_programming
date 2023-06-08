@@ -1,0 +1,7 @@
+This repository for Python - import & modules project at ALX. In this project we will learn:
+- How to import functions from another file
+- How to use imported functions
+- How to create a module
+- How to use the built-in function dir()
+- How to prevent code in your script from being executed when imported
+- How to use command line arguments with your Python programs
