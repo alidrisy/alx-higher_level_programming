@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-a = 1
-b = 2
-if __name__ == "__main__":
+if __name__ == "__main__":  
     from add_0 import add
-    print("{:s} + {:s}".format(str(a), str(b)), end="")
-    print(" = {:s}".format(str(add(a, b))))
+    a = 1
+    b = 2
+    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
