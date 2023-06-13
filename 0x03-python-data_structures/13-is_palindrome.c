@@ -35,7 +35,7 @@ int is_palindrome(listint_t **head)
 	return (1);
 	new = *head;
 	c = len_list(new);
-	node = malloc(sizeof(int *) * c);
+	node =(int *)  malloc(sizeof(int) * c);
 	while (new != NULL)
 	{
 		node[x] = new->n;
