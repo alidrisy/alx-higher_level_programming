@@ -10,14 +10,14 @@
 
 int len_list(listint_t *new)
 {
-	int x = 0;
-	
-	while (new != NULL)
-	{
-		new = new->next;
-		x++;
-	}
-	return (x);
+int x = 0;
+
+while (new != NULL)
+{
+new = new->next;
+x++;
+}
+return (x);
 }
 
 /**
