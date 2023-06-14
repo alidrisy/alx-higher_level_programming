@@ -1,17 +1,6 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     new = []
-    list0 = []
-    list1 = []
-    list2 = []
-    n = 0
     for i in matrix:
-        if n == 0:
-            list0 += map(lambda x: x*x, i)
-        elif n == 1:
-            list1 += map(lambda x: x*x, i)
-        else:
-            list2 += map(lambda x: x*x, i)
-        n += 1
-    new = [list0, list1, list2]
+        new.append(list(map(lambda x: x*x, i)))
     return new
