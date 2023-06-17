@@ -8,4 +8,4 @@ def roman_to_int(roman_string):
     for n in reversed(roman_string):
         j = x[n]
         s += j if s < j * 5 else -j
-        return s
+    return s
