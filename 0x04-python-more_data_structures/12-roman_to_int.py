@@ -1,21 +1,16 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    x = 0
-    for i in roman_string:
-        if i == 'I':
-            x += 1
-        elif i == 'V':
-            x += 5
-        elif i == 'X':
-            x += 10
-        elif i == 'L':
-            x += 50
-        elif i == 'C':
-            x += 100
-        elif i == 'D':
-            x += 500
-        elif i == 'M':
-            x += 1000
-    if x > 3999:
-        x = 0
-    return (x)
+	x = {'I' : 1, 'V' : 5, 'X' : 10, 'L' : 50, 'C' : 100, 'D' : 500, 'M' : 1000}
+	s = 0
+	r = len(roman_string)
+	for i, j in x.items():
+		for c in range(r):
+			n = roman_string[c]
+			if roman_string[c] == 'I' and c != r - 1:
+				if roman_string[c+1] != 'I':
+					j -= 1
+			if i == n:
+				s += j 
+			elif n not in x.keys():
+				return 0
+    return s
