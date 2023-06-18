@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <Python.h>
+
 void print_python_list_info(PyObject *p)
 {
 PyListObject *cast;
 Py_ssize_t i, list_size;
 PyObject *item;
-char *type_item;
+const char *type_item;
 
 list_size = PyList_Size(p);
 cast = (PyListObject *) p;
