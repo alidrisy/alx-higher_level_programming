@@ -18,7 +18,7 @@ printf(" [ERROR] Invalid Bytes Object\n");
 return; 
 }
 
-printf("   trying string: ")
+printf("   trying string: ");
 for (x = 0; str[x]; x++)
 printf("%s", str[x]);
 printf("\n");
@@ -34,7 +34,7 @@ else
 {
 printf("   first 10 bytes: ");
 for (i = 0; i < 10; i++)
-printf("%x ", (void*)str[i]);
+printf("%x ", (unsigned int*)str[i]);
 printf("\n");
 }
 }
