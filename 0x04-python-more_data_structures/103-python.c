@@ -6,7 +6,7 @@ void print_python_bytes(PyObject *p)
 {
 Py_ssize_t bytsize, i;
 char *str;
-
+int x;
 bytsize = PyBytes_Size(p);
 
 printf("[.] bytes object info size: %d", (int)bytsize);
