@@ -27,7 +27,7 @@ if (bytsize <= 10)
 {
 printf("   first %d bytes: ", (int)bytsize + 1);
 for (i = 0; i <= bytsize; i++)
-printf("%x ", (void*)str[i]);
+printf("%x ", (unsigned int*)str[i]);
 printf("\n");
 }
 else
