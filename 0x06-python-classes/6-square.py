@@ -48,8 +48,8 @@ class Square:
             print()
         else:
             for i in range(x):
-                for n in range(v):
-                    if self.__position[1] <= 0:
+                if self.__position[1] <= 0:
+                    for n in range(v):
                         print(" ", end="")
                 for c in range(x):
                     print("#", end="")
