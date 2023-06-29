@@ -51,9 +51,8 @@ class Square:
         for b in range(self.__position[1]):
             print()
         if x == 0:
-            for n in range(v):
-                print(" ", end="")
             print()
+            return
 
         for i in range(x):
             for n in range(v):
