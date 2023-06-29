@@ -49,7 +49,8 @@ class Square:
         else:
             for i in range(x):
                 for n in range(v):
-                    print(" ", end="")
+                    if position[1] <= 0:
+                        print(" ", end="")
                 for c in range(x):
                     print("#", end="")
                 print()
