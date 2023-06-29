@@ -3,6 +3,7 @@
 
 
 class Node:
+    """Define linked list."""
 
     def __init__(self, data, next_node=None):
         """Initialize node instance.
@@ -41,6 +42,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Define a linkedlist."""
 
     def __init__(self):
         """Initialize a class data."""
