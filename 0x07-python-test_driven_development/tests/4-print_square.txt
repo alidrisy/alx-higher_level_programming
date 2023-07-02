@@ -1,0 +1,46 @@
+The ''4-print_square'' module                      ====================
+How to use 4-print_square.py
+====================
+Using printing
+This is a test for ''print_square'' from ''4-print_square'':
+
+    >>> print_square = __import__('4-print_square').print_square
+ 
+Now use it:
+test division and rounded:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+..
+
+    >>> print_square('n')
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+..
+
+    >>> print_square(-6)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+..
+
+    >>> print_square(2.6)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+..
+
+    >>> print_square(0)
+
+..
+
+    >>> print_square(1)
+    #
+
