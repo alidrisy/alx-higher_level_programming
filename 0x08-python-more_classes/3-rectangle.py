@@ -53,6 +53,8 @@ class Rectangle:
         """print the rectangle with the character #"""
         w = self.__width
         h = self.__height
+        if h == 0 or w == 0:
+            return ""
         my_list = []
         for i in range(h):
             for x in range(w):
