@@ -5,11 +5,16 @@
 class Rectangle:
     """Rectangle class"""
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """Initilaize data."""
 
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
+        Rectangle.print_symbol = self.print_symbol
 
     @property
     def width(self):
@@ -58,7 +63,7 @@ class Rectangle:
         my_list = []
         for i in range(h):
             for x in range(w):
-                my_list.append('#')
+                my_list.append(str(self.print_symbol))
             if i != h - 1:
                 my_list.append('\n')
         x = ''.join(my_list)
@@ -68,3 +73,8 @@ class Rectangle:
         str1 = "Rectangle(" + str(self.__width) + ", " + \
                 str(self.__height) + ")"
         return (str1)
+
+    def __del__(self):
+        """Print the message Bye rectangle..."""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
