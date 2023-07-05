@@ -63,5 +63,8 @@ class TestMaxInteger (unittest.TestCase):
         with self.assertRaises (ValueError):
             max_integer([float('x'), 7, 5])
 
+if__name__ == '__main__':
+	unittest.main()
+
 
 
