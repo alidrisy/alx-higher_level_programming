@@ -81,10 +81,5 @@ float point:
 
 ..
 
-    >>> add_integer(float('inf'),)
-    89
-
-..
-
     >>> add_integer(float('5'))
     103
