@@ -78,6 +78,8 @@ float point:
     Traceback (most recent call last):
     ...
     TypeError: float() argument must be a string or a number, not 'NoneType'
+    >>> add_integer(float('inf'),1)
+    89
 
 ..
 
