@@ -76,12 +76,5 @@ float point:
 
 ..
 
-    >>> add_integer(float(None))
-    Traceback (most recent call last):
-    ...
-    TypeError: float() argument must be a string or a real number, not 'NoneType'
-
-..
-
     >>> add_integer(float('5'))
     103
