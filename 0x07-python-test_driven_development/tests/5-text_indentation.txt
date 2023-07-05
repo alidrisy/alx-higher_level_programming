@@ -62,3 +62,6 @@ test division and rounded:
 
     >>> text_indentation("")
 
+    >>> text_indentation("   Hi there.")
+    Hi there.
+    <BLANKLINE>

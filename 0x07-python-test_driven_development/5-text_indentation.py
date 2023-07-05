@@ -4,8 +4,11 @@
 
 def text_indentation(text):
     """ Doc """
+    
     if type(text) is not str:
         raise TypeError("text must be a string")
+
+    text = text.strip()
     after_new_line = False
     for c in text:
         if after_new_line:
