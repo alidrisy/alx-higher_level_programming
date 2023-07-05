@@ -74,11 +74,21 @@ float point:
     ...
     NameError: name 'Nan' is not defined
 
+..
+
     >>> add_integer(float(None))
     Traceback (most recent call last):
     ...
     TypeError: float() argument must be a string or a number, not 'NoneType'
+    
+..
+
     >>> add_integer(float('inf'),1)
+    89
+
+..
+
+    >>> add_integer(float('inf'),)
     89
 
 ..
