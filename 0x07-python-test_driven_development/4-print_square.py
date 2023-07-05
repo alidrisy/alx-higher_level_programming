@@ -2,7 +2,7 @@
 """Define print_square functiont."""
 
 
-def print_square(size):
+def print_square(size=0):
     """Prints a square with the character #."""
 
     if type(size) is not int:

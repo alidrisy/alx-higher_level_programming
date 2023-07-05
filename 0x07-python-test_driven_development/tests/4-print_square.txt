@@ -44,3 +44,7 @@ test division and rounded:
     >>> print_square(1)
     #
 
+    >>> print_square()
+
+..
+
