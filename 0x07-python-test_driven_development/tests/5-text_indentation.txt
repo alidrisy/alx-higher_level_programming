@@ -13,7 +13,7 @@ test division and rounded:
     ... amet, consectetur adipiscing elit. \
     ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
     ... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
-    ... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere.""")
+    ... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam""")
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     <BLANKLINE>
     Quonam modo?
@@ -30,6 +30,7 @@ test division and rounded:
     <BLANKLINE>
     Teneo, inquit, finem illi videri nihil dolere.
     <BLANKLINE>
+    Transfer idem ad modestiam vel temperantiam
 
 ..
 
