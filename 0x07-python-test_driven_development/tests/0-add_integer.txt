@@ -77,7 +77,8 @@ float point:
 ..
 
     >>> add_integer(float('inf'),1)
-    89
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
 
 ..
 
