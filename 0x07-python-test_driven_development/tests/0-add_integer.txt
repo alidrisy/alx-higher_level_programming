@@ -69,10 +69,10 @@ string and char test:
     TypeError: a must be an integer
 
 float point:
-    >>> add_integer(float(Nan))
+    >>> add_integer(float('Nan'))
     Traceback (most recent call last):
     ...
-    NameError: name 'Nan' is not defined
+    ValueError: cannot convert float NaN to integer
     
 ..
 
