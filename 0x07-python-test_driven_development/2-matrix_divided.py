@@ -18,9 +18,9 @@ def matrix_divided(matrix, div):
         if type(matrix) is not list or matrix == [] or type(x) is not list:
             raise TypeError("matrix must be a matrix (list of lists) of "
                             "integers/floats")
-            if not all(type(n) is int or type(n) is float for n in x):
-                raise TypeError("matrix must be a matrix (list of lists) of "
-                                "integers/floats")
+        if not all(type(n) is int or type(n) is float for n in x):
+            raise TypeError("matrix must be a matrix (list of lists) of "
+                            "integers/floats")
 
     if not all(len(raw) == len(matrix[0])for raw in matrix):
         raise TypeError("Each row of the matrix must have the same size")
