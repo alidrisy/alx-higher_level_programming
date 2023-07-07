@@ -7,6 +7,7 @@ def matrix_divided(matrix, div):
 
     if div == 0:
         raise ZeroDivisionError("division by zero")
+
     if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
 
@@ -21,4 +22,4 @@ def matrix_divided(matrix, div):
     if not all(len(raw) == len(matrix[0])for raw in matrix):
         raise TypeError("Each row of the matrix must have the same size")
 
-    return [list(map(lambda x: round(float(x/div), 2), i)) for i in matrix]
+    return [[round(item / div, 2) for item in row] for row in matrix]
