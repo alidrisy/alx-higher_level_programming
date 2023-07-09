@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Define matrix_mul function"""
+
+
 def matrix_mul(m_a, m_b):
+    """multiplies 2 matrices"""
+
     if type(m_a) is not list:
         raise TypeError("m_a must be a list")
     if type(m_b) is not list:
