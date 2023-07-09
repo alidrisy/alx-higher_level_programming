@@ -33,9 +33,9 @@ def matrix_mul(m_a, m_b):
     mat = []
     for i in range(len(m_a)):
         new = []
-        for j in range(len(m_a[i])):
+        for j in range(len(m_b[0])):
             x = 0
-            for r in range(len(m_b)):
+            for r in range(len(m_a[0])):
                 x += m_a[i][r] * m_b[r][j]
             new.append(x)
         mat.append(new)
