@@ -3,7 +3,7 @@
 
 
 class MyList(list):
-    """ inherits from list"""
+    """Class that inherits from list"""
 
     def __init__(self):
         """Initialize data"""
@@ -16,4 +16,4 @@ class MyList(list):
         for i in list1:
             if i.isdigit():
                 new.append(int(i))
-            print(sorted(new))
+        print(sorted(new))
