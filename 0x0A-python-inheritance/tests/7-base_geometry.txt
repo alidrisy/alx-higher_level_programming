@@ -9,7 +9,7 @@ start:
      >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
-start testing:
+start testing errors:
 
      >>> bg = BaseGeometry()
      >>> bg.integer_validator("my_int", 12)
@@ -39,3 +39,40 @@ start testing:
      ... except Exception as e:
      ...     print("[{}] {}".format(e.__class__.__name__, e))
      [TypeError] Abdo must be an integer
+
+pass an empty name:
+
+     >>> try:
+     ...     bg.integer_validator("", 1.2)
+     ... except Exception as e:
+     ...      print("[{}] {}".format(e.__class__.__name__, e))
+     [TypeError]  must be an integer
+     >>>
+
+pass number to name:
+
+>>> try:
+...     bg.integer_validator(6, 1.2)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] 6 must be an integer
+
+
+pass None:
+
+>>> try:
+...     bg.integer_validator("Abdo", None)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] Abdo must be an integer
+
+
+pass bool value:
+
+>>> try:
+...     bg.integer_validator("Abdo", True)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] Abdo must be an integer
+
+
