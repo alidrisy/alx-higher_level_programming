@@ -1,0 +1,41 @@
+7-base_geometry.txt
+===============
+testing for the module ''BaseGeometry'' from ''7-base_geometry''.
+===============
+test that validates value.
+
+start:
+ 
+     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+start testing:
+
+     >>> bg = BaseGeometry()
+     >>> bg.integer_validator("my_int", 12)
+     >>> try:
+     ...     bg.integer_validator("name", "John")
+     ... except Exception as e:
+     ...     print("[{}] {}".format(e.__class__.__name__, e))
+     [TypeError] name must be an integer
+     >>> try:
+     ...     bg.integer_validator("age", 0)
+     ... except Exception as e:
+     ...     print("[{}] {}".format(e.__class__.__name__, e))
+     [ValueError] age must be greater than 0
+     >>> try:
+     ...     bg.integer_validator("distance", -4)
+     ... except Exception as e:
+     ...     print("[{}] {}".format(e.__class__.__name__, e))
+     [ValueError] distance must be greater than 0
+
+     >>> try:
+     ...     bg.integer_validator("me", 2)
+     ... except Exception as e:
+     ...     print("[{}] {}".format(e.__class__.__name__, e))
+     
+     >>> try:
+     ...     bg.integer_validator("Abdo", 1.2)
+     ... except Exception as e:
+     ...     print("[{}] {}".format(e.__class__.__name__, e))
+     [TypeError] Abdo must be an integer
