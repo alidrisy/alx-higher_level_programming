@@ -52,53 +52,53 @@ pass an empty name:
 
 pass None:
 
->>> try:
-...     bg.integer_validator("Abdo", None)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] Abdo must be an integer
+	>>> try:
+	...	bg.integer_validator("Abdo", None)
+	... except Exception as e:
+	...	print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] Abdo must be an integer
 
 
 pass bool value:
 
->>> try:
-...     bg.integer_validator("Abdo", True)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] Abdo must be an integer
+	>>> try:
+	...     bg.integer_validator("Abdo", True)
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] Abdo must be an integer
 
 
 pass zero:
 
->>> try:
-...     bg.integer_validator("Abdo", 0)
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[ValueError] Abdo must be greater than 0
+	>>> try:
+	...     bg.integer_validator("Abdo", 0)
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[ValueError] Abdo must be greater than 0
 
 
 pass empty function:
 
->>> try:
-...     bg.integer_validator("Abdo", )
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+	>>> try:
+	...     bg.integer_validator("Abdo", )
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 
 pass float(nan) number:
 
->>> try:
-...     bg.integer_validator("Abdo", float('nan'))
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] Abdo must be an integer
+	>>> try:
+	...     bg.integer_validator("Abdo", float('nan'))
+	... except Exception as e:
+	...	print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] Abdo must be an integer
 
 
 pass a strnumber:
 
->>> try:
-...     bg.integer_validator("Abdo", '2')
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] Abdo must be an integer
+	>>> try:
+	...     bg.integer_validator("Abdo", '2')
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] Abdo must be an integer
