@@ -93,3 +93,24 @@ pass a strnumber:
 	... except Exception as e:
 	...     print("[{}] {}".format(e.__class__.__name__, e))
 	[TypeError] Abdo must be an integer
+
+
+pass an integer as name:
+
+
+	>>> try:
+	...     bg.integer_validator(6,"Abdo")
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] 6 must be an integer
+
+
+test the area method:
+
+	>>> try:
+	...	print(bg.area())
+	... except Exception as e:                           
+	...	print("[{}] {}".format(e.__class__.__name__, e))
+	[Exception] area() is not implemented
+
+
