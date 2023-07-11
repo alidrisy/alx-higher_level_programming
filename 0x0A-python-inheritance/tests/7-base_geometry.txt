@@ -11,6 +11,8 @@ start:
 
 start testing errors:
 
+test commun case:
+
      >>> bg = BaseGeometry()
      >>> bg.integer_validator("my_int", 12)
      >>> try:
@@ -114,3 +116,37 @@ test the area method:
 	[Exception] area() is not implemented
 
 
+pass list:
+
+	>>> try:
+	...     bg.integer_validator("ali",[1, 2])
+	... except Exception as e:                           
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] ali must be an integer
+
+
+pass tuple:
+
+	>>> try:
+	...     bg.integer_validator("ali",(1, 2))
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] ali must be an integer
+
+
+pass tpule:
+
+
+	>>> try:
+	...     bg.integer_validator("ali",(1, 2))
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	[TypeError] ali must be an integer
+
+
+test nurmal mode:
+
+	>>> bg.integer_validator("ali", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: ali must be greater than 0
