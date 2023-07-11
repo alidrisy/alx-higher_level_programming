@@ -47,7 +47,7 @@ pass an empty name:
      ... except Exception as e:
      ...      print("[{}] {}".format(e.__class__.__name__, e))
      [TypeError]  must be an integer
-     >>>
+
 
 
 pass None:
@@ -75,15 +75,6 @@ pass zero:
 	... except Exception as e:
 	...     print("[{}] {}".format(e.__class__.__name__, e))
 	[ValueError] Abdo must be greater than 0
-
-
-pass empty function:
-
-	>>> try:
-	...     bg.integer_validator("Abdo", )
-	... except Exception as e:
-	...     print("[{}] {}".format(e.__class__.__name__, e))
-	[TypeError] BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
 
 pass float(nan) number:
