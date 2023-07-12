@@ -14,7 +14,7 @@ class Student:
         if type(attrs) is list and attrs != []:
             new = []
             for key in attrs:
-                if type(key) is str and key in self.__dict__:
+                if type(key) is str and key in self.__dict__.keys():
                     new += [(key, getattr(self, key))]
             return dict(new)
         return self.__dict__
