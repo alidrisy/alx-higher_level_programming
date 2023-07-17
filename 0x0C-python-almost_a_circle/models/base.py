@@ -31,7 +31,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        fn = list_objs[0].__class__.__name__ + ".json"
+        fn = cls.__name__ + ".json"
         with open(fn, mode="w") as fp:
             if list_objs is None or list_objs == []:
                 fp.write("[]")
