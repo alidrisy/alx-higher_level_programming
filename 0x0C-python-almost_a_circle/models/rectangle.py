@@ -16,10 +16,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """set private attr"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """set private attr"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 1:
@@ -28,10 +30,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """set private attr"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """set private attr"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 1:
@@ -40,10 +44,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """set private attr"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """set private attr"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -52,10 +58,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """set private attr"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """set private attr"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -63,9 +71,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """returns the area value of the Rectangle"""
         return (self.__width * self.__height)
 
     def display(self):
+        """prints in stdout the Rectangle instance with the character #"""
         for i in range(self.__y):
             print()
         for i in range(self.__height):
@@ -76,10 +86,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return (f"[{self.__class__.__name__}] ({self.id}) {self.__x}/\
 {self.__y} - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
         i = 0
         if args and args != ():
             for j in args:
@@ -99,6 +111,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Return the dictionary representation of a Rectangle."""
         new = []
         ne = ["id", "width", "height", "x", "y"]
         for key in ne:
