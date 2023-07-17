@@ -31,16 +31,14 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        new = []
         fn = list_objs[0].__class__.__name__ + ".json"
         with open(fn, mode="w") as fp:
             if list_objs is None:
                 fp.write("[]")
             else:
-                for obj in list_objs:
-                    new.append(obj.to_dictionary())
-                ne = cls.to_json_string(new)
-                fp.write(ne)
+                new = cls.to_json_string([obj.to_dictionary()
+                                         for obj in list_objs])
+                fp.write(new)
 
     @classmethod
     def create(cls, **dictionary):
