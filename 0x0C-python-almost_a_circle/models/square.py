@@ -8,22 +8,27 @@ class Square(Rectangle):
     and print square"""
 
     def __init__(self, size, x=0, y=0, id=None):
+        """initilaize data"""
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
+        """set private attr"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """set private attr"""
         self.width = value
         self.height = value
 
     def __str__(self):
+        """return [Square] (<id>) <x>/<y> - <size>"""
         return (f"[{self.__class__.__name__}] ({self.id}) \
 {self.x}/{self.y} - {self.size}")
 
     def update(self, *args, **kwargs):
+        """assigns attributes"""
         i = 0
         if args and args != ():
             for j in args:
@@ -40,6 +45,7 @@ class Square(Rectangle):
             super().update(**kwargs)
 
     def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
         new = []
         ne = ["id", "size", "x", "y"]
         for key in ne:
