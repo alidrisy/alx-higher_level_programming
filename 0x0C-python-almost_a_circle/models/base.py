@@ -33,12 +33,14 @@ class Base:
     def save_to_file(cls, list_objs):
         new = []
         fn = list_objs[0].__class__.__name__ + ".json"
-        if list_objs is not None:
-            for obj in list_objs:
-                new.append(obj.to_dictionary())
-        ne = cls.to_json_string(new)
         with open(fn, mode="w", encoding="utf-8") as fp:
-            fp.write(ne)
+            if list_objs is None:
+                fp.write("[]")
+            else:
+                for obj in list_objs:
+                    new.append(obj.to_dictionary())
+                ne = cls.to_json_string(new)
+                fp.write(ne)
 
     @classmethod
     def create(cls, **dictionary):
