@@ -6,6 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """A class to get an area of rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initilaize data"""
         self.width = width
         self.height = height
         self.x = x
