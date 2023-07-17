@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define a Base class"""
 import json
+import csv
 
 
 class Base:
@@ -86,7 +87,7 @@ class Base:
         """Return a list of classes instantiated from a CSV file."""
         fn = cls.__name__ + ".csv"
         try:
-            with open(fn, "r", newline="") as fp:
+            with open(fn, mode="r", newline="") as fp:
                 if cls.__name__ == "Rectangle":
                     header = ["id", "width", "height", "x", "y"]
                 else:
