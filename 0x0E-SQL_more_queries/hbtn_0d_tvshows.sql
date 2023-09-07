@@ -18,7 +18,6 @@
 --
 -- Table structure for table `tv_genres`
 --
-
 DROP TABLE IF EXISTS `tv_genres`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
