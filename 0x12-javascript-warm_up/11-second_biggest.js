@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const length = process.argv.length;
-let num = 0;
+
 if (length <= 3) {
   console.log(0);
 } else {
