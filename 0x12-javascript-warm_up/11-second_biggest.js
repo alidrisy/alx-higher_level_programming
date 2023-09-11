@@ -8,7 +8,7 @@ if (length <= 3) {
   for (let i = 0; i < length - 2; i++) {
     myList[i] = parseInt(process.argv[i + 2]);
   }
-  myList.sort((a, b) => a - b);
+  myList.sort();
   myList.reverse();
   num = myList[1];
 }
