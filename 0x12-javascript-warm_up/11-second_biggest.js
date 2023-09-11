@@ -4,9 +4,10 @@ if (length < 4) {
   console.log(0);
 } else {
   const myList = [];
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length - 2; i++) {
     myList[i] = Number(process.argv[i + 2]);
   }
   myList.sort();
-  console.log(myList[length - 4]);
+  myList.reverse();
+  console.log(myList[1]);
 }
