@@ -1,6 +1,7 @@
 #!/usr/bin/node
 const length = process.argv.length;
-if (length < 4) {
+
+if (length <= 3) {
   console.log(0);
 } else {
   const myList = [];
