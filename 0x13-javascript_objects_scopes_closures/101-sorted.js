@@ -2,17 +2,17 @@
 const dict = require('./101-data').dict;
 
 function arr (dct, value) {
-const list = [];
-for (const [key] of Object.entries(dct)) {
-  if (dct[key] === value) {
-    list.push(key);
+  const list = [];
+  for (const [key] of Object.entries(dct)) {
+    if (dct[key] === value) {
+      list.push(key);
+    }
   }
+  return list;
 }
-return list;
-};
 
 const dict1 = {};
-for (const [key, value] of Object.entries(dict)) {
+for (const value of Object.values(dict)) {
   dict1[value] = arr(dict, value);
 }
 console.log(dict1);
