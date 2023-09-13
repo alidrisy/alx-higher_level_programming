@@ -1,0 +1,4 @@
+#!/usr/bin/node
+
+const my = require('./100-main');
+var myVar = 333;
