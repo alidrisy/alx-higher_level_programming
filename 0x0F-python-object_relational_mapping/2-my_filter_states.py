@@ -9,8 +9,8 @@ if __name__ == '__main__':
     con = MySQLdb.connect(host='localhost', port=3306, user=argv[1],
                           passwd=argv[2], db=argv[3], charset="utf8")
     curs = con.cursor()
-    curs.execute("SELECT * FROM `states` WHERE name like '{}'\
-           ORDER BY id ASC;".format(argv[4]))
+    curs.execute("SELECT * FROM states WHERE name like '{}'\
+           ORDER BY id ASC".format(argv[4]))
     rows = curs.fetchall()
 
     for row in rows:
