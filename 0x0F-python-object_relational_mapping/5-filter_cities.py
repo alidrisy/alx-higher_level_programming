@@ -10,7 +10,8 @@ if __name__ == '__main__':
                           passwd=argv[2], db=argv[3])
     curs = con.cursor()
     curs.execute("SELECT cities.name, cities.id FROM states, cities WHERE\
-            states.id = cities.state_id AND states.name = %s ORDER BY cities.id ASC;", (argv[4], ))
+            states.id = cities.state_id AND states.name = %s ORDER BY\
+            cities.id ASC;", (argv[4], ))
     rows = curs.fetchall()
 
     x = len(rows)
