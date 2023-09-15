@@ -9,8 +9,8 @@ if __name__ == '__main__':
     con = MySQLdb.connect(host='localhost', port=3306, user=argv[1],
                           passwd=argv[2], db=argv[3])
     curs = con.cursor()
-    curs.execute("SELECT cities.name FROM states, cities WHERE\
-            states.id = cities.state_id AND states.name = %s;", (argv[4], ))
+    curs.execute("SELECT cities.name, cities.id FROM states, cities WHERE\
+            states.id = cities.state_id AND states.name = %s ORDER BY cities.id ASC;", (argv[4], ))
     rows = curs.fetchall()
 
     x = len(rows)
