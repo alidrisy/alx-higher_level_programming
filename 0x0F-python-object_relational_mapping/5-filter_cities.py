@@ -15,10 +15,10 @@ if __name__ == '__main__':
 
     x = len(rows)
     for r in range(x):
+        print(rows[r][0], end='')
         if r != x - 1:
-            print(rows[r][0], end=', ')
-        else:
-            print(rows[r][0])
+            print(', ', end='')
+    print()
 
     curs.close()
     con.close()
