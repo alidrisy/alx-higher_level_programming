@@ -10,7 +10,7 @@ if __name__ == '__main__':
                           passwd=argv[2], db=argv[3], charset="utf8")
     curs = con.cursor()
     curs.execute("SELECT states.id, states.name FROM states WHERE\
-            states.name LIKE 'N%';")
+            states.name like 'N%';")
     rows = curs.fetchall()
 
     for row in rows:
