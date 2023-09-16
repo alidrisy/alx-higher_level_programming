@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""This script creates the State “California” with the City
-“San Francisco” from the database hbtn_0e_100_usa"""
+"""This script lists all State objects, and corresponding
+City objects, contained in the database hbtn_0e_101_usa i
+from the database hbtn_0e_101_usa"""
 import sys
 from relationship_state import Base, State
 from relationship_city import City
@@ -14,9 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = State(name='California')
-    city = City(name='San Francisco')
-    state.cities.append(city)
-    session.add(city)
-    session.add(state)
-    session.commit()
+    for state in session.query(State).order_by(State.id):
+        print('{}: {}'.format(state.id, state.name))
+        for city in session.query(City).filter(City.state_id == state.id):
+            print('   {}: {}'.format(city.id, city.name))
