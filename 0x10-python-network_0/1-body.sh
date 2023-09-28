@@ -1,3 +1,3 @@
 #!/bin/bash
 # This script takes in a URL, sends a GET request to the URL, and displays only body of a 200 status code response
-curl -fs "$1"
+curl -fs -X GET "$1"
