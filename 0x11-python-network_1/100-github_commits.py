@@ -10,11 +10,8 @@ if __name__ == "__main__":
     resp = requests.get(url)
     try:
         js_r = resp.json()
-        if js_r != {}:
-            for com in js_r:
-                print(com['sha'], end=": ")
-                print(com['commit']['author']['name'])
-        else:
-            print("None")
+        for com in js_r:
+            print("{}: {}".format(com.get('sha'), com.get('commit')
+                                  .get('author').get('name')))
     except Exception:
-        print("None")
+        pass
