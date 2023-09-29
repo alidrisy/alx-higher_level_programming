@@ -6,7 +6,7 @@ import sys
 
 
 if __name__ == "__main__":
-    if isys.argv[1]:
+    if sys.argv[1]:
         data = {'q': sys.argv[1]}
     else:
         data = {'q': ""}
