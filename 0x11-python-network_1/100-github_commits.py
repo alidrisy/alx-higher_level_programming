@@ -11,7 +11,7 @@ if __name__ == "__main__":
     try:
         js_r = resp.json()
         for i in range(10):
-            com = js_r[1]
+            com = js_r[i]
             print("{}: {}".format(com.get('sha'), com.get('commit')
                                   .get('author').get('name')))
     except Exception:
