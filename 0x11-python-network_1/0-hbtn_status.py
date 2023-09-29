@@ -7,6 +7,6 @@ if __name__ == "__main__":
     with request.urlopen(ur) as req:
         str1 = req.read()
     print("Body response:")
-    print(f"   - type: {type(str1)}")
-    print(f"   - content: {str1}")
-    print(f"   - utf8 content: {str1.decode('ascii')}")
+    print(f"    - type: {type(str1)}")
+    print(f"    - content: {str1}")
+    print(f"    - utf8 content: {str1.decode('ascii')}")
