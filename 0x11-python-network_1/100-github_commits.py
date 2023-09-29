@@ -5,12 +5,13 @@ import sys
 
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits?per_page=10"\
+    url = "https://api.github.com/repos/{}/{}/commits"\
             .format(sys.argv[1], sys.argv[2])
     resp = requests.get(url)
     try:
         js_r = resp.json()
-        for com in js_r:
+        for i in range(10):
+            com = js_r[1]
             print("{}: {}".format(com.get('sha'), com.get('commit')
                                   .get('author').get('name')))
     except Exception:
