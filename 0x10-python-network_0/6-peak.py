@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Function find peaks inside a list """
+"""
+Function find peaks inside a list
+"""
 
 
 def find_peak(list_of_integers):
