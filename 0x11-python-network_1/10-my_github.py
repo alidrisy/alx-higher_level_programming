@@ -8,7 +8,7 @@ import sys
 if __name__ == "__main__":
     url = f"https://api.github.com/users/{sys.argv[1]}"
     arg = f"Bearer {sys.argv[2]}"
-    header = {'Authorization': arg, 'accept': "application/vnd.github+json"} 
+    header = {'Authorization': arg, 'accept': "application/vnd.github+json"}
     resp = requests.get(url, headers=header)
     try:
         js_r = resp.json()
