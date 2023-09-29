@@ -9,6 +9,7 @@ from sys import argv
 if __name__ == "__main__":
     data = parse.urlencode({"email": argv[2]})
     data = data.encode('utf-8')
-    ur = request.Request(argv[1])
+    ur = request.Request(argv[1], data)
     with request.urlopen(ur) as req:
-        print(req.read().decode("utf-8"))
+        str1 = req.read()
+        print(str1.decode("utf-8"))
