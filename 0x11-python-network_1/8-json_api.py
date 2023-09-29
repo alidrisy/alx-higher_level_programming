@@ -6,8 +6,11 @@ import sys
 
 
 if __name__ == "__main__":
-    resp = requests.post('http://0.0.0.0:5000/search_user',
-                         data={'q': sys.argv[1]})
+    if isys.argv[1]:
+        data = {'q': sys.argv[1]}
+    else:
+        data = {'q': ""}
+    resp = requests.post('http://0.0.0.0:5000/search_user', data)
     try:
         js_r = resp.json()
         if js_r != {}:
