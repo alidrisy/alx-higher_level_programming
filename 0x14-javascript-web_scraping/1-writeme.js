@@ -1,11 +1,11 @@
 #!/usr/bin/node
-// Reads and prints the content of a file.
+// Writes a string to a file.
 
 const fs = require('fs');
 const filename = process.argv[2];
+const content = process.argv[3];
 try {
-  const content = fs.readFileSync(filename, 'utf-8');
-  console.log(content);
+  fs.writeFileSync(filename, content, 'utf-8');
 } catch (error) {
-  console.error(error);
+  console.log(error);
 }
