@@ -1,0 +1,24 @@
+#!/usr/bin/node
+// Display the status code of a GET request.
+
+const request = require('request');
+const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
+request.get(url, function (_error, _response, body) {
+  const charecters = JSON.parse(body).characters;
+  charecters.sort((a, b) => {
+    if (a.split('/')[5] > b.split('/')[5]) {
+	    return (-1);
+    } if (a.split('/')[5] < b.split('/')[5]) {
+	    return (1);
+    }
+	  return (0);
+  }
+
+  for (let i = 0; i < charecters.length; i++) {
+    request.get(charecters[i], function (_error, response) {
+      const person = JSON.parse(response.body);
+      console.log(person.name);
+      console.log(charecters[i]);
+    });
+  }
+});

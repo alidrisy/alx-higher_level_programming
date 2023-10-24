@@ -3,12 +3,18 @@
 
 const request = require('request');
 const url = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2];
-request.get(url, function (_error, response) {
-  const charecter = JSON.parse(response.body).characters;
-  for (const ur of charecter) {
-    request.get(ur, function (_error, response) {
-      const person = JSON.parse(response.body);
-      console.log(person.name);
-    });
+
+function requestChar (characters, num) {
+  if (num >= characters.length) {
+    return;
   }
+  request.get(characters[num], function (_error, _response, body) {
+    console.log(JSON.parse(body).name);
+    requestChar(characters, num + 1);
+  });
+}
+
+request.get(url, function (_error, _response, body) {
+  const characters = JSON.parse(body).characters;
+  requestChar(characters, 0);
 });
