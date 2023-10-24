@@ -1,0 +1,9 @@
+#!/usr/bin/node
+// Display the status code of a GET request.
+
+const request = require('request');
+const url = process.argv[2] + '?completed=true';
+request.get(url, function (_error, response) {
+  const charecter = JSON.parse(response.body);
+  const x = charecter.forEach((s) => s['userId'] == 1 ? console.log(s):0);
+});
